@@ -1,0 +1,28 @@
+name: check_interrupts
+description: "file:///README.md"
+url: "https://github.com/honza/icinga-interrupts-plugin"
+tags: Network, Interface, Interrupts, igb, ix
+vendor: Unix
+target: Network
+type: Plugin
+license: MIT
+releases: 
+  - 
+    name: 1.0.0
+    description: "1.0.0 Release"
+    files: 
+      - 
+        name: check_interrupts.sh
+        url: "file:///check_interrupts.sh"
+        description: "First release"
+        checksum: 08753511d1608e3c8844f02be3f08126
+      - 
+        name: icinga2.conf
+        url: "file:///commands/icinga2.conf"
+        description: "Example of config for Icinga2"
+        checksum: 2e1f9ad9c16e90ada49de0bcc165996c
+      - 
+        name: nagios.cfg
+        url: "file:///commands/nagios.cfg"
+        description: "Example of config for Nagios"
+        checksum: 2f4352db38f6d138830cc5df2f41a5c3
