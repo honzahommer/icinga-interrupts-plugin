@@ -6,7 +6,6 @@ CRITICAL="90%"
 SYSCTL="/sbin/sysctl"
 
 NCPU="$($SYSCTL -in hw.ncpu)"
-NQUE="$((NCPU-1))"
 
 help() {
   echo "Usage: $0 -i iface [ -w interrupts ] [ -c interrupts ] [ -h ]"
@@ -55,7 +54,7 @@ if [ $WARNING -ge $CRITICAL ]; then
   exit 3
 fi
 
-INTERRUPTS="$(for ((q=0; q<NQUE; q++)); do
+INTERRUPTS="$(for ((q=0; q<NCPU; q++)); do
   seq 100 | xargs -I{} sysctl -in "dev.$IFACE.queue$q.interrupt_rate" | sort -n | head -1
 done | awk '{ s += $1 } END { print s }')"
 
