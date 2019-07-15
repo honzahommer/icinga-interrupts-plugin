@@ -2,20 +2,20 @@ name: check_interrupts
 description: "file:///README.md"
 url: "https://github.com/honza/icinga-interrupts-plugin"
 tags: Network, Interface, Interrupts, igb, ix
-vendor: Unix
+vendor: BSD
 target: Network
 type: Plugin
 license: MIT
 releases: 
   - 
-    name: 1.0.0
-    description: "1.0.0 Release"
+    name: 1.0.1
+    description: "1.0.1 Release"
     files: 
       - 
         name: check_interrupts.sh
         url: "file:///check_interrupts.sh"
         description: "First release"
-        checksum: 08753511d1608e3c8844f02be3f08126
+        checksum: c798ba21111a60a31770816fd6de973c
       - 
         name: icinga2.conf
         url: "file:///commands/icinga2.conf"
