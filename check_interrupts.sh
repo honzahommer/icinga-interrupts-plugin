@@ -55,7 +55,10 @@ if [ $WARNING -ge $CRITICAL ]; then
 fi
 
 INTERRUPTS="$(for ((q=0; q<NCPU; q++)); do
-  seq 100 | xargs -I{} sysctl -in "dev.$IFACE.queue$q.interrupt_rate" | sort -n | head -1
+  for i in {1..3}; do
+    seq 10 | xargs -I{} sysctl -in "dev.$IFACE.queue$q.interrupt_rate" | sort -n | awk ' { a[i++]=$1; } END { print a[int(i/2)]; }'
+    sleep 1
+  done | sort -n | head -n1
 done | awk '{ s += $1 } END { print s }')"
 
 if [ -z "$INTERRUPTS" ]; then
