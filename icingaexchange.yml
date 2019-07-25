@@ -8,21 +8,21 @@ type: Plugin
 license: MIT
 releases: 
   - 
-    name: 1.0.1
-    description: "1.0.1 Release"
+    name: 1.0.2
+    description: "1.0.2 Release"
     files: 
       - 
         name: check_interrupts.sh
         url: "file:///check_interrupts.sh"
         description: "First release"
-        checksum: c798ba21111a60a31770816fd6de973c
+        checksum: e185c55462941eb36b99f122b1377081
       - 
         name: icinga2.conf
         url: "file:///commands/icinga2.conf"
         description: "Example of config for Icinga2"
-        checksum: 2e1f9ad9c16e90ada49de0bcc165996c
+        checksum: 851ed58864e977f811b8dadd86f1c459
       - 
         name: nagios.cfg
         url: "file:///commands/nagios.cfg"
         description: "Example of config for Nagios"
-        checksum: 2f4352db38f6d138830cc5df2f41a5c3
+        checksum: 4ab6e9176c0103c9ddf3c22ad9e509b6
